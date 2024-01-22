@@ -29,13 +29,23 @@ galleryEl.addEventListener('click', e => {
   e.preventDefault();
   console.dir(e.target);
   if (!e.target.classList.contains('gallery__image')) {
-    // console.log('kkk')
     return;
   }
 
-  console.log('ooo');
+  const instance = basicLightbox.create(
+    `<img src="${e.target.dataset.sourc}" width="1400" height="900">`
+  );
+  instance.show();
+
+  document.addEventListener('keydown', event => {
+    console.log('code: ', event.code);
+    if (event.code === 'Escape') {
+      instance.close();
+    }
+    return;
+  });
 });
-console.log(_.reflect - metadata);
+
 // const markup = galleryItems.map(e => `<li class="gallery__item">
 //       <a class="gallery__link" href="${e.original}">
 //       <img class="gallery__image"
