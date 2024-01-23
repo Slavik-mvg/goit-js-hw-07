@@ -54,19 +54,6 @@ galleryEl.addEventListener('click', e => {
 // galleryEl.insertAdjacentHTML('beforeend', markup);
 // console.log(markup);
 // -------------------------------
-// let markup = '';
-// for (let i = 0; i < 9; i += 1) {
-//   markup += `<li class="gallery__item">
-//   <a class="gallery__link" href="${galleryItems[i].original}">
-//     <img
-//       class="gallery__image"
-//       src="${galleryItems[i].preview}"
-//      data-source="${galleryItems[i].original}"
-//       alt="${galleryItems[i].description}"
-//     />
-//   </a>
-// </li>`;
-// }
 // galleryEl.innerHTML = markup;
 // // console.dir(markup);
 
